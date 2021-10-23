@@ -1,0 +1,14 @@
+{
+	"name": "AzureSqlDatabaseSourceDatasetEntity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "[dbo].[Perth_airport_Data]"
+		}
+	}
+}
