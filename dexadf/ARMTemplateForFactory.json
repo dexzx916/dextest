@@ -82,7 +82,57 @@
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
-				"schema": [],
+				"schema": [
+					{
+						"name": "Product_code",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bureau_of_Meteorology_station_number",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Year",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Month",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Day",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Maximum_temperature_Degree_C",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Days_of_accumulation_of_maximum_temperature",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Quality",
+						"type": "nvarchar"
+					},
+					{
+						"name": "weatherdate",
+						"type": "smalldatetime",
+						"precision": 16,
+						"scale": 0
+					},
+					{
+						"name": "ID",
+						"type": "int",
+						"precision": 10
+					}
+				],
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "Perth_metro_Data"
@@ -343,7 +393,19 @@
 					],
 					"transformations": [],
 					"scriptLines": [
-						"source(allowSchemaDrift: true,",
+						"source(output(",
+						"          Product_code as string,",
+						"          Bureau_of_Meteorology_station_number as integer,",
+						"          Year as integer,",
+						"          Month as integer,",
+						"          Day as integer,",
+						"          Maximum_temperature_Degree_C as double,",
+						"          Days_of_accumulation_of_maximum_temperature as integer,",
+						"          Quality as string,",
+						"          weatherdate as timestamp,",
+						"          ID as integer",
+						"     ),",
+						"     allowSchemaDrift: true,",
 						"     validateSchema: false,",
 						"     enableCdc: true,",
 						"     mode: 'read',",
