@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Perth_airport_Data"
+			"table": "Perth_metro_Data"
 		}
 	}
 }
