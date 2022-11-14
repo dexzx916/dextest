@@ -17,12 +17,11 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT waterMarkValue\nFROM [dbo].[WaterMarktable]\nWHERE tableName = '@{pipeline().parameters.finalTableName}'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "AzureSqlTable2",
 						"type": "DatasetReference"
 					}
 				}
