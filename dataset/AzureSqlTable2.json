@@ -54,7 +54,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Perth_airport_Data"
+			"table": "watermarktable"
 		}
 	}
 }
